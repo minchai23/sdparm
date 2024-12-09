@@ -29,5 +29,11 @@ jobs:
       with:
         languages: "c-cpp"
 
+    - name: Build the project
+      run: |
+        ./autoconf.sh
+        ./configure
+        make
+
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
